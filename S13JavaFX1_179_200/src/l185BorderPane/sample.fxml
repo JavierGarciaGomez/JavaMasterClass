@@ -1,0 +1,38 @@
+<!--186 BorderPane Layout
+Resize behavior: top preferred height and extend widht of the border pane
+Left and right have preferred width and extend the height between top and bottom
+Center: will have whatever is left
+-->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:controller="l185BorderPane.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+<!-- 185. In a borderPane We have to indicate the position and -->
+    <top>
+        <Label text="This label is in the top position" alignment="CENTER"
+               BorderPane.alignment="CENTER"
+        style="-fx-border-color: blue; -fx-border-width: 3; -fx-border-style: dashed"/>
+    </top>
+    <center>
+        <FlowPane alignment="BOTTOM_LEFT">
+                <Label text = "Hola"/>
+        </FlowPane>
+
+    </center>
+    <bottom>
+        <HBox spacing="20" alignment="TOP_RIGHT">
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+
+            <!--prefwidth to change the size of a control-->
+            <Button text="Ok" prefWidth="90"/>
+            <Button text="Cancel"/>
+            <Button text="Help" prefWidth="90"/>
+
+        </HBox>
+    </bottom>
+</BorderPane>

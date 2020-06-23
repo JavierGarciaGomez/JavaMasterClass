@@ -1,0 +1,65 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:id="mainBorderPane" fx:controller="l196_210SetupSampleApp.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+<!--    201 Menu Bar-->
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="New..." onAction="#showNewItemDialog"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Exit" onAction="#handleExit"/>
+                    </items>
+                </Menu>
+            </MenuBar>
+            <!--208 Adding a toolbar and a tooltip-->
+            <ToolBar>
+                <HBox>
+                    <Button text="New... " onAction="#showNewItemDialog">
+                        <tooltip>
+                            <Tooltip text ="Add a new todo item"/>
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@icon.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <ToggleButton fx:id="filterToggleButton" text="Today's Items" onAction="#handleFilter">
+                        <tooltip>
+                            <Tooltip text="Button down: show todays items only"/>
+                        </tooltip>
+                    </ToggleButton>
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+    <left>
+        <!--        196
+        ListView
+        -->
+        <ListView fx:id="todoListView" onKeyPressed="#handleKeyPressed">
+
+        </ListView>
+    </left>
+    <center>
+    <!--        198-->
+        <VBox style="-fx-background-color: GREEN">
+            <TextArea fx:id="textArea" VBox.vgrow="ALWAYS" wrapText="true"/>
+            <HBox>
+                <Label fx:id="deadlineLabel" text="Due" style="-fx-background-color: GREEN">
+                    <font>
+                        <Font name="Arial bold" size="20"/>
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

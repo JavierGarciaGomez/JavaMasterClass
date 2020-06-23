@@ -1,0 +1,30 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane fx:controller="l183_184GridLayout.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          gridLinesVisible="true"> <!-- This sets the lines of the grid visible -->
+    <!-- 184 Padding -->
+    <padding>
+        <Insets top="50"/>
+    </padding>
+<!--
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50"/>
+        <ColumnConstraints percentWidth="10"/>
+        <ColumnConstraints percentWidth="40"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="25"/>
+        <RowConstraints percentHeight="75"/>
+    </rowConstraints>
+-->
+
+    <!-- 184 GridPaneAlignment -->
+    <Button text="b1" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="RIGHT"></Button>
+    <Button text="b1" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.halignment="RIGHT"></Button>
+    <Button text="b1" GridPane.rowIndex="0" GridPane.columnIndex="2"></Button>
+    <!-- 184 GridSpan -->
+    <Button text="Really long text" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2"></Button>
+    <Button text="b1" GridPane.rowIndex="1" GridPane.columnIndex="2"></Button>
+</GridPane>

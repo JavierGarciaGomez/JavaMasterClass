@@ -1,0 +1,108 @@
+<!--187: Controls
+Button: properties, default, height, skin...
+IconRepository
+Adding image to Button
+
+188:
+Wraptext: this adjust the text in two or more lines to fit correctly
+RadioButton:
+    -selected property
+ToggleGroup
+
+CheckBox: it has three states: selected, unselected and indeterminate
+ToggleButton
+
+189:
+TextField
+PasswordField
+ComboBox: default, editable
+ChoiceBox
+
+190: Slider, Spinner, ColorPicker & DatePicker
+Slider min max showTickLabels, showTickMarks, snatToTicks
+
+-->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<GridPane fx:controller="l187_191Controls.Controller"
+          xmlns:fx="http://javafx.com/fxml" vgap="10" hgap="10">
+    <Button text="Click me" GridPane.rowIndex="0" GridPane.columnIndex="0" wrapText="true"/>
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="This is a label"
+           textFill="blue" wrapText="true"/>
+    <fx:define>
+        <ToggleGroup fx:id="colorToggleGroup"/>
+    </fx:define>
+    <RadioButton GridPane.rowIndex="1" GridPane.columnIndex="0" text="text" toggleGroup="$colorToggleGroup"/>
+    <RadioButton GridPane.rowIndex="1" GridPane.columnIndex="1" text="text" toggleGroup="$colorToggleGroup" selected="true"/>
+    <RadioButton GridPane.rowIndex="1" GridPane.columnIndex="2" text="text" toggleGroup="$colorToggleGroup"/>
+
+    <CheckBox text="MyCheckBox" GridPane.rowIndex="2" GridPane.columnIndex="0" indeterminate="true"/>
+    <HBox GridPane.rowIndex="3" GridPane.columnSpan="3" alignment="CENTER">
+        <Label alignment="CENTER">HOLA</Label>
+    </HBox>
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="3">
+        <CheckBox text="Dog"/>
+        <CheckBox text="Cat"/>
+        <CheckBox text="Bird"/>
+        <ToggleButton text="ToggleMe"/>
+    </VBox>
+    <HBox GridPane.rowIndex="4" alignment="CENTER" GridPane.columnSpan="4">
+        <TextField text="Default Text"/>
+        <PasswordField text="Password"/>
+        <ComboBox editable="false">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Option1"/>
+                    <String fx:value="Option2"/>
+                    <String fx:value="Option3"/>
+                </FXCollections>
+            </items>
+            <!--Default option-->
+            <value>
+                <String fx:value="Option3"/>
+            </value>
+        </ComboBox>
+        <ChoiceBox>
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Option1"/>
+                    <String fx:value="Option2"/>
+                    <String fx:value="Option3"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+    </HBox>
+    <HBox GridPane.rowIndex="5" alignment="CENTER" GridPane.columnSpan="4">
+        <Slider min="0" max="100" showTickLabels="true" showTickMarks="true" minorTickCount="10" snapToTicks="true"/>
+        <Spinner min="0" max="10" editable="true" initialValue="3"/>
+        <ColorPicker/>
+        <DatePicker/>
+        <Accordion>
+            <panes>
+                <TitledPane text="Titled Pane">
+                    <Label text="Label"/>
+                </TitledPane>
+                <TitledPane text="Titled Pane">
+                    <Label text="Label"/>
+                </TitledPane>
+                <TitledPane text="Titled Pane">
+                    <Label text="Label"/>
+                </TitledPane>
+
+            </panes>
+        </Accordion>
+    </HBox>
+
+
+
+
+
+</GridPane>

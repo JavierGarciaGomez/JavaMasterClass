@@ -1,0 +1,13 @@
+<?import javafx.scene.layout.GridPane?>
+<!-- -->
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:controller="l180_.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Label textFill="green">Welcome to JafaFX
+        <font>
+            <Font name="Arial bold" size="60"></Font>
+        </font>
+    </Label>
+
+</GridPane>

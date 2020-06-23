@@ -1,0 +1,20 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!--Adding CSS
+spacing: space between controls-->
+<HBox fx:controller="l184_HBoxLayout.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="bottom_right"
+            style="-fx-border-color: red; -fx-border-width: 5; -fx-border-style: dashed"
+            spacing="20">
+    <padding>
+        <Insets bottom="10" right="10"/>
+    </padding>
+
+    <!--prefwidth to change the size of a control-->
+    <Button text="Ok" prefWidth="90"/>
+    <Button text="Cancel"/>
+    <Button text="Help" prefWidth="90"/>
+
+</HBox>

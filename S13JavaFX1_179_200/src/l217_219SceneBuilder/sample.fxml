@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<GridPane alignment="center" vgap="10" xmlns="http://javafx.com/javafx/8.0.112-ea"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="l217_219SceneBuilder.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <HBox spacing="5.0" GridPane.rowIndex="1">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAction" prefHeight="32.0" prefWidth="48.0" style="-fx-text-fill: white;" text="OK">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Cancel" />
+            <Button mnemonicParsing="false" text="Help" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </HBox>
+      <Label fx:id="label" text="My Label" />
+   </children>
+</GridPane>

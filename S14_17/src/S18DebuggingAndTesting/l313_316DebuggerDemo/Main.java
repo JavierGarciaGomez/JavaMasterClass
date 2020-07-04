@@ -8,6 +8,11 @@ public class Main {
             utilities.addChar(stringBuilder, 'a'); // adding a char for 10 times
         }
         System.out.println(stringBuilder);
+
+        String str = "abcde";
+        String result = utilities.upperAndPrefix(utilities.addSuffix(str));
+
+        System.out.println(result);
     }
 
 }

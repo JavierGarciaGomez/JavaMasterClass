@@ -11,12 +11,18 @@ public class Main {
         Datasource datasource = new Datasource();
         datasource.connect();
 
-        List<Artist> artists = datasource.queryArtist(2);
-
+        List<Artist> artists = datasource.queryArtist(Datasource.ORDER_BY_ASC);
         for (Artist a: artists) {
             System.out.println(a);
         }
+
+        List<String> albumsForArtist = datasource.queryAlbumsForArtist("Pink Floyd", Datasource.ORDER_BY_ASC);
+        for(String album:albumsForArtist){
+            System.out.println(album);
+        }
         datasource.close();
+
+
 
     }
 }

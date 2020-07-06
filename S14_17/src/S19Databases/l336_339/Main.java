@@ -4,7 +4,7 @@ import org.sqlite.JDBC;
 
 import java.sql.*;
 
-public class Main337 {
+public class Main {
     public static final String DB_NAME = "testjava.db";
     public static final String CONNECTION_STRING = "jdbc:sqlite:C:\\Databases\\" + DB_NAME;
     public static final String TABLE_CONTACTS = "contacts";

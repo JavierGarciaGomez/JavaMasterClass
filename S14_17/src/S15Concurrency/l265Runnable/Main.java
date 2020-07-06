@@ -46,7 +46,7 @@ public class Main {
         AnotherThread anotherThread2 = new AnotherThread();
         anotherThread2.setName("== Another Thread ==");
         anotherThread2.start();
-        anotherThread2.run(); // This is not running from the AnotherTread class, but from Main337
+        anotherThread2.run(); // This is not running from the AnotherTread class, but from Main
 
         // sleep()
         new SleepThread().start();

@@ -22,7 +22,7 @@ import java.util.Random;
             collection, we can call the collections.synchronizeList and pass it to the collection.
   CODE
        -0: Reader class
-       -3: Main: it doesnt work, because there is no notification between threads
+       -3: Main337: it doesnt work, because there is no notification between threads
        -Add the wait() and notify()
 
 

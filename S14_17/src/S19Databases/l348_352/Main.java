@@ -45,7 +45,6 @@ public class Main {
         songArtists = datasource.querySongInfoView(title);
         if(songArtists.isEmpty()) {
             System.out.println("Couldn't find the artist for the song");
-            return;
         }
 
         for(SongArtist artist : songArtists) {
@@ -53,6 +52,9 @@ public class Main {
                     " Album name = " + artist.getAlbumName() +
                     " Track number = " + artist.getTrack());
         }
+        //352
+        System.out.println("***************352***************");
+        datasource.insertSong("Touch of Grey", "Grateful Dead", "In the Dark", 1);
         datasource.disconnect();
 
 

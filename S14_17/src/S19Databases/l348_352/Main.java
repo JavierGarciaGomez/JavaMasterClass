@@ -1,8 +1,8 @@
-package S19Databases.l348_;
+package S19Databases.l348_352;
 
-import S19Databases.l348_.model.Artist;
-import S19Databases.l348_.model.Datasource;
-import S19Databases.l348_.model.SongArtist;
+import S19Databases.l348_352.model.Artist;
+import S19Databases.l348_352.model.Datasource;
+import S19Databases.l348_352.model.SongArtist;
 
 import java.util.List;
 import java.util.Scanner;

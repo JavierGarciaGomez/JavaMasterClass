@@ -1,4 +1,4 @@
-package S19Databases.l348_.model;
+package S19Databases.l348_352.model;
 
 public class SongArtist {
     private String artistName;

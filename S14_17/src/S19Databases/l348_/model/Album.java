@@ -1,4 +1,4 @@
-package S19Databases.l340_344.model;
+package S19Databases.l348_.model;
 
 public class Album {
     private int id;

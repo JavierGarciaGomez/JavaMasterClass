@@ -1,9 +1,9 @@
-package S19Databases.l340_344;
+package S19Databases.l340_345;
 
-import S19Databases.l340_344.model.Artist;
-import S19Databases.l340_344.model.Datasource;
+import S19Databases.l340_345.model.Artist;
+import S19Databases.l340_345.model.Datasource;
+import S19Databases.l340_345.model.SongArtist;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -20,6 +20,13 @@ public class Main {
         for(String album:albumsForArtist){
             System.out.println(album);
         }
+
+        List<SongArtist> songArtists = datasource.queryArtistsForSong("Go Your Own Way", Datasource.ORDER_BY_ASC);
+        for(SongArtist songArtist: songArtists){
+            System.out.println(songArtist);
+        }
+
+        datasource.querySongsMetadata();
         datasource.close();
 
 

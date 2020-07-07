@@ -1,4 +1,4 @@
-package S19Databases.l340_344.model;
+package S19Databases.l340_345.model;
 
 public class Artist {
     private int id;

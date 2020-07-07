@@ -1,4 +1,4 @@
-package S19Databases.l340_344.model;
+package S19Databases.l346_347.model;
 
 public class Song {
     private int id;

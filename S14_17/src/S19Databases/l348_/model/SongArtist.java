@@ -1,9 +1,15 @@
-package S19Databases.l340_344.model;
+package S19Databases.l348_.model;
 
 public class SongArtist {
     private String artistName;
     private String albumName;
     private int track;
+
+    public SongArtist(String artistName, String albumName, int track) {
+        this.artistName = artistName;
+        this.albumName = albumName;
+        this.track = track;
+    }
 
     public String getArtistName() {
         return artistName;
@@ -27,5 +33,14 @@ public class SongArtist {
 
     public void setTrack(int track) {
         this.track = track;
+    }
+
+    @Override
+    public String toString() {
+        return "SongArtist{" +
+                "artistName='" + artistName + '\'' +
+                ", albumName='" + albumName + '\'' +
+                ", track=" + track +
+                '}';
     }
 }

@@ -21,13 +21,12 @@ public class Client {
             String response; // Input
 
             do {
-                System.out.println("Enter string to beechoed: ");
+                System.out.println("Enter string to be echoed: ");
                 echoString = scanner.nextLine();
 
                 // sending the String
                 stringToEcho.println(echoString);
                 if (!echoString.equals("exit")) {
-
                     response = echoes.readLine();
                     System.out.println(response);
                 }

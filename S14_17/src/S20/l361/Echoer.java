@@ -13,13 +13,15 @@ public class Echoer extends Thread {
     @Override
     public void run() {
         try {
+            System.out.println("Main accepted");
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            PrintWriter output = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
+            PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
 
             while (true) {
                 String echoString = input.readLine();
+                System.out.println(echoString);
                 if (echoString.equals("exit")) break;
-                else output.println("ECHOING: "+echoString);
+                output.println("ECHOING: "+echoString);
             }
         } catch (IOException e) {
         } finally {

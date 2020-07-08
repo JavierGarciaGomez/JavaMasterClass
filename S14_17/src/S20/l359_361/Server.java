@@ -13,7 +13,7 @@ public class Server {
 
             while(true){
                 Socket socket = serverSocket.accept();
-                System.out.println("Client connected");
+                System.out.println("Main connected");
                 BufferedReader input = new BufferedReader
                         (new InputStreamReader(socket.getInputStream()));
                 PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
